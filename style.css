@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #232528;
+    background-color: #212224;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -275,6 +275,7 @@ header {
 
     font-weight: 350;
     font-size: 40px;
+    z-index: 20;
 }
 
 .hero p {
@@ -287,6 +288,7 @@ header {
     font-size: 15px;
     text-align: center;
     width: 40%;
+    z-index: 20;
 }
 
 .hero a {
@@ -297,6 +299,7 @@ header {
 
     font-weight: 350;
     text-align: center;
+    z-index: 20;
 }
 
 .botao {
@@ -308,6 +311,13 @@ header {
     text-decoration: none;
 
     border-radius: 6px;
+    z-index: 20;
+}
+
+.hero video {
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to top, transparent, #101828 80%, #101828 20%, transparent);
+    mask-image: linear-gradient(to top, transparent, #101828 65%, #101828 35%, transparent);
 }
 
 @media (max-width: 968px) {
