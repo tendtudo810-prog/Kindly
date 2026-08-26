@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #212224;
+    background-color: #0c0d0d;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -20,7 +20,7 @@ body {
 
 
 header {
-    background-color: #0b0d10;
+    background-color: #323335;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -303,15 +303,24 @@ header {
 }
 
 .botao {
-    background-color: #e0e0e0;
+    background-color: #16A34A;
     color: #000000;
     padding: 20px;
     width: 20%;
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
 
     border-radius: 6px;
     z-index: 20;
+    transition: 0.6s;
+}
+
+.botao:hover {
+    background-color: #126932;
+    padding: 27px;
+    color: #fff;
+    font-size: 17px;
+    transition: 0.6s;
 }
 
 .hero video {
