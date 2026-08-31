@@ -20,7 +20,7 @@ body {
 
 
 header {
-    background-color: #323335;
+    background-color: transparent;
     padding: 15px 0;
     border-radius: 50px ;
     
@@ -31,9 +31,9 @@ header {
     z-index: 100;
     width: 80%;
     height: 9%;
-    background: rgba(37, 36, 36, 0.65);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar {
@@ -49,15 +49,14 @@ header {
 
 .logo {
     color: #0b0d10;
-    background-color: #ffffff;
-    width: 60px;
-    height: 60px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
     font-size: 0.8rem;
+    margin-left: -5vw;
 }
 
 .pic {
