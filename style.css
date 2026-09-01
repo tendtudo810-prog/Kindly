@@ -197,6 +197,8 @@ header {
 .catalog-grid {
     display: flex;  
     gap: 20px;
+
+    
 }
 
 .back {
@@ -226,31 +228,68 @@ header {
     transition: transform 0.2s;
     cursor: pointer;
     transition: 0.6s;
+
+    margin-top: -85vh;
 }
 
 .catalog-item:hover i {
     transform: translateY(-5px);
     transition: 0.6s;
-}
-
-.circle {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #16A34A;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    color: #15833d;
 }
 
 .fa-shirt {
     font-size: 60px;
     left: 12.6%;
-    top: 48%;
+    top: 10%;
     transition: 0.6s;
     position: absolute;
-    color: #137236;
+    color: #16A34A;
+}
+
+.fa-futbol {
+    font-size: 60px;
+    left: 26.7%;
+    top: 10%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-shoelace {
+    font-size: 60px;
+    left: 41.2%;
+    top: 10%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-glasses {
+    font-size: 60px;
+    left: 55.2%;
+    top: 10%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-mobile-screen-button {
+    font-size: 60px;
+    left: 69.3%;
+    top: 10%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-cart-shopping {
+    font-size: 60px;
+    left: 83.5%;
+    top: 10%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
 }
 
 .hero h1 {
