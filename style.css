@@ -20,7 +20,7 @@ body {
 
 
 header {
-    background-color: #000000;
+    background-color: #080909;
     padding: 15px 0;
     
     position: absolute;
@@ -197,18 +197,16 @@ header {
 .catalog-grid {
     display: flex;  
     gap: 20px;
-
-    
 }
 
 .back {
     position: absolute;
-    top: 250%;
+    top: 230%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 20px;
+    border-radius: 30px;
 
-    background-color: #f8f4f4;
+    background-color: #f1f1f1;
     padding: 50% 8%;
 
 }
@@ -352,6 +350,47 @@ header {
     width: 100%;
     -webkit-mask-image: linear-gradient(to top, transparent, #101828 80%, #101828 20%, transparent);
     mask-image: linear-gradient(to top, transparent, #101828 65%, #101828 35%, transparent);
+
+    height: 100%;
+}
+
+.ads {
+    position: absolute;
+    top: 250%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-roupa {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ad {
+    width: 30%;
+    border-radius: 15px;
+}
+
+.roupas {
+    position: absolute;
+    top: -40%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+
+    width: 100%;
+}
+
+.roupas h1 {
+    font-size: 40px;
+    margin-bottom: 1.2vh;
+    color:#000000;
+    width: 100%;
 }
 
 @media (max-width: 968px) {
