@@ -193,76 +193,36 @@ body {
 }
 
 .catalog-grid {
-    display: flex;  
+    position: relative;
+    z-index: 10001;
+    display: flex;
     gap: 20px;
 }
 
 .back {
     position: absolute;
-    top: 250%;
+    top: 430%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 30px;
     width: 100%;
 
     background-color: #f1f1f1;
-    padding: 50% 8%;
-
+    padding: 150% 8%;
 }
 
-.fa-shirt {
-    font-size: 60px;
-    position: absolute;
-    left: 14.4%;
-    top: 15%;
-    transform: translate(-50%, -50%);
-    transition: 0.6s;
-    color: #16A34A;
+.catalog-item svg {
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
 }
 
-.fa-futbol {
-    font-size: 60px;
-    left: 25.8%;
-    top: 13%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
+.catalog-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-.fa-shoelace {
-    font-size: 60px;
-    left: 40.4%;
-    top: 13%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-glasses {
-    font-size: 60px;
-    left: 54.4%;
-    top: 13%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-mobile-screen-button {
-    font-size: 60px;
-    left: 68.6%;
-    top: 13%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-cart-shopping {
-    font-size: 60px;
-    left: 82.9%;
-    top: 13%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
+    z-index: 10000;
 }
 
 .catalog-item {
@@ -277,14 +237,12 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     font-weight: 500;
-    transition: transform 0.2s;
     cursor: pointer;
+    z-index: 10000;
     transition: 0.6s;
-
-    margin-top: -85vh;
 }
 
-.catalog-item:hover i {
+.catalog-item:hover svg {
     transform: translateY(-10%, -10%);
     transition: 0.6s;
     color: #15833d;
@@ -292,7 +250,7 @@ body {
 
 .hero h1 {
     position: absolute;
-    top: 45%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -398,14 +356,139 @@ body {
     border-radius: 15px;
 }
 
-.roupas h1 {
+.t-roupa {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 15%;
     transform: translate(-50%, -50%);
     border-radius: 30px;
     text-align: center;
-    margin-top: 200vh;
+    margin-top: 170vh;
+    font-size: 40px;
+    font-weight: 500;
+
+    color: #000000;
+    width: 100%;
+}
+
+.min-h-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: auto;
+}
+
+.anuncios,
+.anuncios1,
+.anuncios2,
+.anuncios3,
+.anuncios4,
+.anuncios5 {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: start;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 24px;
+}
+
+.anuncios > .min-h-screen,
+.anuncios1 > .min-h-screen,
+.anuncios2 > .min-h-screen,
+.anuncios3 > .min-h-screen,
+.anuncios4 > .min-h-screen,
+.anuncios5 > .min-h-screen {
+    width: 100%;
+    min-width: 0;
+    min-height: auto !important;
+    margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .catalog-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .catalog-item {
+        flex: 1 1 140px;
+        width: auto;
+    }
+
+    .anuncios,
+    .anuncios1,
+    .anuncios2,
+    .anuncios3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .anuncios4,
+    .anuncios5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .anuncios,
+    .anuncios1,
+    .anuncios2,
+    .anuncios3 {
+        grid-template-columns: 1fr;
+    }
+
+    .anuncios4,
+    .anuncios5 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.brinquedos h1 {
+    position: absolute;
+    top: 110%;
+    left: 16.5%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 170vh;
+    font-size: 40px;
+    font-weight: 500;
+    z-index: 20;
+
+    color: #000000;
+    width: 100%;
+}
+
+.calcados h1 {
+    position: absolute;
+    top: 190%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 170vh;
+    font-size: 40px;
+    font-weight: 500;
+    z-index: 20;
+
+    color: #000000;
+    width: 100%;
+}
+
+.acessorios h1 {
+    position: absolute;
+    top: 270%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 170vh;
+    font-size: 40px;
+    font-weight: 500;
+    z-index: 20;
 
     color: #000000;
     width: 100%;
@@ -427,4 +510,32 @@ body {
     .catalog-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.back {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    padding: 70px 8%;
+}
+
+.ads {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 50px auto 40px;
+    padding: 0 20px;
+}
+
+.ads h1 {
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 0;
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: left;
 }
