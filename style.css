@@ -18,29 +18,11 @@ body {
     padding: 0 20px;
 }
 
-
-header {
-    background-color: #080909;
-    padding: 15px 0;
-    
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    width: 100%;
-    height: 9%;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    position: relative;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .logo {
@@ -52,7 +34,6 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;
-    margin-left: -20vw;
 }
 
 .pic {
@@ -63,7 +44,24 @@ header {
     display: flex;
     gap: 20px;
     list-style: none;
-    margin-left: 5vw;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .nav-links,
+    .ct {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .nav-links a {
@@ -201,14 +199,70 @@ header {
 
 .back {
     position: absolute;
-    top: 230%;
+    top: 250%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 30px;
+    width: 100%;
 
     background-color: #f1f1f1;
     padding: 50% 8%;
 
+}
+
+.fa-shirt {
+    font-size: 60px;
+    position: absolute;
+    left: 14.4%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    transition: 0.6s;
+    color: #16A34A;
+}
+
+.fa-futbol {
+    font-size: 60px;
+    left: 25.8%;
+    top: 13%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-shoelace {
+    font-size: 60px;
+    left: 40.4%;
+    top: 13%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-glasses {
+    font-size: 60px;
+    left: 54.4%;
+    top: 13%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-mobile-screen-button {
+    font-size: 60px;
+    left: 68.6%;
+    top: 13%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
+}
+
+.fa-cart-shopping {
+    font-size: 60px;
+    left: 82.9%;
+    top: 13%;
+    transition: 0.6s;
+    position: absolute;
+    color: #16A34A;
 }
 
 .catalog-item {
@@ -231,74 +285,22 @@ header {
 }
 
 .catalog-item:hover i {
-    transform: translateY(-5px);
+    transform: translateY(-10%, -10%);
     transition: 0.6s;
     color: #15833d;
 }
 
-.fa-shirt {
-    font-size: 60px;
-    left: 12.6%;
-    top: 10%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-futbol {
-    font-size: 60px;
-    left: 26.7%;
-    top: 10%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-shoelace {
-    font-size: 60px;
-    left: 41.2%;
-    top: 10%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-glasses {
-    font-size: 60px;
-    left: 55.2%;
-    top: 10%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-mobile-screen-button {
-    font-size: 60px;
-    left: 69.3%;
-    top: 10%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
-.fa-cart-shopping {
-    font-size: 60px;
-    left: 83.5%;
-    top: 10%;
-    transition: 0.6s;
-    position: absolute;
-    color: #16A34A;
-}
-
 .hero h1 {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     font-weight: 350;
     font-size: 40px;
     z-index: 20;
+    text-align: center;
+    width: 100%;
 }
 
 .hero p {
@@ -312,6 +314,7 @@ header {
     text-align: center;
     width: 40%;
     z-index: 20;
+    width: 50%;
 }
 
 .hero a {
@@ -354,13 +357,6 @@ header {
     height: 100%;
 }
 
-.ads {
-    position: absolute;
-    top: 250%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .container-roupa {
     display: flex;
     gap: 20px;
@@ -371,25 +367,47 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.infos {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    margin-top: 260vh;
+    gap: 20px;
+    width: 50%;
+    color: #000000;
+}
+
 .ad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 248vh;
+    gap: 20px;
+}
+
+.ad-image {
     width: 30%;
     border-radius: 15px;
 }
 
-.roupas {
+.roupas h1 {
     position: absolute;
-    top: -40%;
-    left: 20%;
+    top: 50%;
+    left: 15%;
     transform: translate(-50%, -50%);
     border-radius: 30px;
+    text-align: center;
+    margin-top: 200vh;
 
-    width: 100%;
-}
-
-.roupas h1 {
-    font-size: 40px;
-    margin-bottom: 1.2vh;
-    color:#000000;
+    color: #000000;
     width: 100%;
 }
 
