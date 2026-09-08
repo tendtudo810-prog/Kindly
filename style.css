@@ -309,9 +309,9 @@ body {
 
 .hero video {
     width: 100%;
-    -webkit-mask-image: linear-gradient(to top, transparent, #101828 80%, #101828 20%, transparent);
+    opacity: 60%;
+    -webkit-mask-image: linear-gradient(to top, transparent, #101828 70%, #101828 30%, transparent);
     mask-image: linear-gradient(to top, transparent, #101828 65%, #101828 35%, transparent);
-
     height: 100%;
 }
 
@@ -371,42 +371,7 @@ body {
     width: 100%;
 }
 
-.min-h-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    min-height: auto;
-}
-
-.anuncios,
-.anuncios1,
-.anuncios2,
-.anuncios3,
-.anuncios4,
-.anuncios5 {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    align-items: start;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    gap: 24px;
-}
-
-.anuncios > .min-h-screen,
-.anuncios1 > .min-h-screen,
-.anuncios2 > .min-h-screen,
-.anuncios3 > .min-h-screen,
-.anuncios4 > .min-h-screen,
-.anuncios5 > .min-h-screen {
-    width: 100%;
-    min-width: 0;
-    min-height: auto !important;
-    margin-top: 0 !important;
-}
+ 
 
 @media (max-width: 768px) {
     .catalog-grid {
@@ -519,6 +484,7 @@ body {
     transform: none;
     width: 100%;
     padding: 70px 8%;
+    margin-top: 100vh;
 }
 
 .ads {
