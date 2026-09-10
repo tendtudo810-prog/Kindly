@@ -199,20 +199,9 @@ body {
     z-index: 10001;
     display: flex;
     gap: 20px;
-
-    margin-top: -90vh;
-}
-
-.back {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
-    width: 100%;
-    
-    background-color: #f1f1f1;
-    padding: 150% 0%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .catalog-item svg {
@@ -230,12 +219,14 @@ body {
 }
 
 .catalog-item {
-    background-color: #ffffff;
-    height: 180px;
+    --catalog-width: 250px;
+    --catalog-height: 180px;
+    background-color: #1f1e1e;
+    height: var(--catalog-height);
     border-radius: 6px;
     padding: 20px;
-    width: 250px;
-    color: #232528;
+    width: var(--catalog-width);
+    color: #fff;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -377,9 +368,14 @@ body {
  
 
 @media (max-width: 768px) {
+    .back {
+        width: calc(100% - 32px);
+        max-width: none;
+        padding: 24px;
+    }
+
     .catalog-grid {
-        flex-wrap: wrap;
-        justify-content: center;
+        max-width: 100%;
     }
 
     .catalog-item {
@@ -481,13 +477,28 @@ body {
 }
 
 .back {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    padding: 70px 8%;
-    margin-top: 100vh;
+    border-radius: 20px;
+    border: 1px solid #6b6b6b;
+    max-width: calc(100%);
+    padding-top: 11vh;
+    padding-bottom: 100vh;
+    margin-top: 170vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.back.is-dragging {
+    cursor: grabbing;
 }
 
 .ads {
@@ -508,3 +519,67 @@ body {
     font-weight: 500;
     text-align: left;
 }
+
+.anuncios {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 40vh;
+}
+
+.anuncio {
+    background-color: #4d4d4d;
+    padding: 35px;
+    padding-bottom: 20vh;
+    cursor: pointer;
+}
+
+.anuncios .anuncio {
+    flex: 0 0 15vw;
+    gap: 2vw;
+}
+
+.anuncio p {
+    margin-top: 9vh;
+    font-size: 15px;
+}
+
+.anuncio h1 {
+    margin-top: 1vh;
+    color: #11c553;
+    font-size: 23px;
+    font-weight: 540;
+    position: absolute;
+}
+
+.anuncio label {
+    margin-top: 5vh;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 540;
+    position: absolute;
+}
+
+.ad {
+    width: 15%;
+    border-radius: 10px;
+    margin-top: 40vh;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.anuncios .ad {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    transform: none;
+}
+
