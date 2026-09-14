@@ -204,6 +204,11 @@ body {
     max-width: 100%;
 }
 
+.catalog-item:hover {
+    background-color: #16A34A;
+    color: #000000;
+}
+
 .catalog-item svg {
     display: block;
     margin-bottom: 10px;
@@ -221,7 +226,7 @@ body {
 .catalog-item {
     --catalog-width: 250px;
     --catalog-height: 180px;
-    background-color: #1f1e1e;
+    background-color: #181717;
     height: var(--catalog-height);
     border-radius: 6px;
     padding: 20px;
@@ -240,7 +245,11 @@ body {
 .catalog-item:hover svg {
     transform: translateY(-10%, -10%);
     transition: 0.6s;
-    color: #15833d;
+    color: #000000;
+}
+
+.catalog-item:hover svg path {
+    fill: #000000;
 }
 
 .hero h1 {
@@ -483,22 +492,18 @@ body {
     transform: translate(-50%, -50%);
     width: 100%;
     border-radius: 20px;
-    border: 1px solid #6b6b6b;
+    border: 1px solid #444343;
     max-width: calc(100%);
     padding-top: 11vh;
-    padding-bottom: 100vh;
-    margin-top: 170vh;
+    padding-bottom: 630vh;
+    margin-top: 420vh;
     margin-left: auto;
     margin-right: auto;
-    background-color: #252525;
+    background-color: #181717;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-
-.back.is-dragging {
-    cursor: grabbing;
 }
 
 .ads {
@@ -520,6 +525,17 @@ body {
     text-align: left;
 }
 
+.text {
+    font-size: 50px;
+    
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+
+    margin-top: -45vh;
+}
+
 .anuncios {
     display: flex;
     gap: 20px;
@@ -529,28 +545,93 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    margin-top: 40vh;
+    margin-top: 80vh;
+    width: 100%;
+}
+
+.anuncios1 {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 180vh;
+    width: 100%;
+}
+
+.anuncios2 {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 280vh;
+    width: 100%;
+}
+
+.anuncios3 {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 380vh;
+    width: 100%;
+}
+
+.anuncios4 {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 480vh;
+    width: 100%;
+}
+
+.anuncios5 {
+    display: flex;
+    gap: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin-top: 580vh;
+    width: 100%;
+}
+
+.anuncio img {
+    width: 100%;
 }
 
 .anuncio {
-    background-color: #4d4d4d;
-    padding: 35px;
-    padding-bottom: 20vh;
-    cursor: pointer;
-}
-
-.anuncios .anuncio {
-    flex: 0 0 15vw;
-    gap: 2vw;
+    background-color: #181717;
+    padding: 30px;
+    border-radius: 20px;
+    padding-bottom: -5px;
 }
 
 .anuncio p {
-    margin-top: 9vh;
+    margin-top: 10vh;
     font-size: 15px;
 }
 
 .anuncio h1 {
-    margin-top: 1vh;
+    margin-top: 2vh;
     color: #11c553;
     font-size: 23px;
     font-weight: 540;
@@ -558,7 +639,7 @@ body {
 }
 
 .anuncio label {
-    margin-top: 5vh;
+    margin-top: 6vh;
     color: #fff;
     font-size: 20px;
     font-weight: 540;
@@ -566,7 +647,7 @@ body {
 }
 
 .ad {
-    width: 15%;
+    width: 100%;
     border-radius: 10px;
     margin-top: 40vh;
 
@@ -583,3 +664,98 @@ body {
     transform: none;
 }
 
+.anuncios1 .ad {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    transform: none;
+}
+
+.anuncios2 .ad {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    transform: none;
+}
+
+.anuncios3 .ad {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    transform: none;
+}
+
+.anuncios4 .ad {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    transform: none;
+}
+
+.anuncios5 .ad {
+    position: static;
+    width: 100%;
+    margin-top: 0;
+    transform: none;
+}
+
+.per {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    margin-top: 830vh;
+    text-align: left;
+}
+
+.per label {
+    font-size: 20px;
+    color: #16A34A;
+    font-weight: 500;
+}
+
+.per h1 {
+    font-size: 30px;
+}
+
+.per p {
+    margin-top: 1vh;
+}
+
+.boxes {
+    display: flex;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 870vh;
+    gap: 20px;
+    width: 80%;
+}
+
+.quadro {
+    padding: 35px;
+    background-color: #1c1d1d;
+    border: 1px solid #444343;
+    border-radius: 10px;
+    transition: 0.7s;
+}
+
+.quadro:hover {
+    background-color: #126932;
+    transition: 0.7s;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.txt {
+    font-size: 25px;
+    margin-top: 1vh;
+}
+
+.quadro p {
+    margin-top: 1vh;
+}
